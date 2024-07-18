@@ -19,8 +19,8 @@ WORKDIR /var/www/html/
 
 # Unzip the file
 RUN unzip handtime.zip && \
-    cp -rvf handtime/* . && \
-    rm -rf handtime handtime.zip
+    cp -rvf handtime-html/* . && \
+    rm -rf handtime-html handtime.zip
 
 # Set the command to run Apache in the foreground
 CMD ["apache2ctl", "-D", "FOREGROUND"]
