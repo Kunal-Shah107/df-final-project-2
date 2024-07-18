@@ -1,7 +1,7 @@
 FROM centos:7
-MAINTAINER acloudguydotin@gmail.com
-RUN sudo yum update -y
-RUN sudo yum install -y httpd zip unzip
+LABEL maintainer="acloudguydotin@gmail.com"
+RUN yum update -y && \
+    yum install -y httpd zip unzip
 RUN sudo zip --version
 RUN sudo unzip --version
 ADD handtime.zip /var/www/html/
