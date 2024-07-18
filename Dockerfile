@@ -1,9 +1,9 @@
 FROM centos:7
 MAINTAINER acloudguydotin@gmail.com
-RUN yum update -y
-RUN yum install -y httpd zip unzip
-RUN zip --version
-RUN unzip --version
+RUN sudo yum update -y
+RUN sudo yum install -y httpd zip unzip
+RUN sudo zip --version
+RUN sudo unzip --version
 ADD handtime.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip handtime.zip
