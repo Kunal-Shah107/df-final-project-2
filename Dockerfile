@@ -11,10 +11,6 @@ ENV TZ=Etc/UTC
 RUN apt-get update && \
     apt-get install -y apache2 zip unzip
 
-# Verify the installation of zip and unzip
-RUN zip --version
-RUN unzip --version
-
 # Add the zip file to the container
 ADD handtime.zip /var/www/html/
 
