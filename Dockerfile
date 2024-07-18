@@ -3,6 +3,10 @@ FROM ubuntu:20.04
 # Set the maintainer label
 LABEL maintainer="acloudguydotin@gmail.com"
 
+# Set environment variable to suppress interactive prompts and set the timezone
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+
 # Update the system and install necessary packages
 RUN apt-get update && \
     apt-get install -y apache2 zip unzip
