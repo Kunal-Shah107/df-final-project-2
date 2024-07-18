@@ -26,5 +26,5 @@ RUN unzip handtime.zip && \
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 # Expose ports 80 and 443
-EXPOSE 80 443
+EXPOSE 80 443 8080
 
