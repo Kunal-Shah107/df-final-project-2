@@ -5,8 +5,7 @@ LABEL maintainer="acloudguydotin@gmail.com"
 
 # Update the system and install necessary packages
 RUN apt-get update && \
-    apt-get install -y apache2 zip unzip && \
-    apt-get clean
+    apt-get install -y apache2 zip unzip
 
 # Verify the installation of zip and unzip
 RUN zip --version
